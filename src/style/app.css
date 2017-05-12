@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Audiowide', cursive;
+}
+
+.App{
+	min-height: 100vh;
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+}
+
+

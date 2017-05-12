@@ -1,0 +1,20 @@
+.profile-search{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.summoner-name{
+	border: 0;
+	outline: 0;
+	height: 50px;
+	background-color: rgba(0,0,0, .1);
+	color: #fff;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.button{
+	cursor: pointer;
+}
+.button.button-search{
+
+}
