@@ -1,20 +1,47 @@
-.profile-search{
-	padding-top: 30px;
-	padding-bottom: 30px;
+@media(min-width: 400px){
+	.profile-search{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
+@media(max-width: 399px){
+	.profile-search{
+		padding: 15px;
+	}
 }
 
-.summoner-name{
+.search-field,
+.button{
+	padding: 15px;
+	font-family: 'Audiowide', cursive;
+	font-size: 14px;
+}
+
+.search-field{
+	width: 300px;
 	border: 0;
 	outline: 0;
-	height: 50px;
 	background-color: rgba(0,0,0, .1);
-	color: #fff;
-	padding-left: 15px;
-	padding-right: 15px;
+	color: #212121;
+	
 }
 .button{
 	cursor: pointer;
 }
 .button.button-search{
+	background: #3F51B5;
+	color: #C5CAE9;
+}
 
+	.button-search:hover{
+		color: #fff;
+	}
+
+@media (max-width: 399px){
+	.search-field,
+	.button{
+		text-align: center;
+		display: block;
+		width: 100%;
+	}
 }
