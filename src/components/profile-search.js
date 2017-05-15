@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
 import $ from 'jquery'; 
 
-class ProfileSearch extends React.Component{
+var ProfileSearch = React.createClass({
 
-  constructor() {
-    super();
-    this.state = {
+  getInitialState() {
+    return {
       summonerData: null
-    };
-  }
+    }
+  },
 
   onSearchButtonClick(){
+    var me = this;
     let key = "RGAPI-a1b83495-f7ac-4586-939d-31961ff89aa0";
     let summonerName = document.querySelector('.search-field').value;
     let URL = "https://eun1.api.riotgames.com/lol/summoner/v3/summoners/by-name/" + summonerName + "?api_key=" + key;
 
 
-    $.getJSON(URL, function(data){
-      this.setState({ summonerData: data });
+    // $.getJSON(URL, function(data){
+    //   this.setState({ summonerData: data });
+    // });
+
+    $.getJSON('response/summoner-name.json', function(data){
+      console.log(me);
+      me.setState({ summonerData: data });
     });
 
-  }
+  },
 
   render(){
     const summonerData = this.state.summonerData;
@@ -32,6 +37,6 @@ class ProfileSearch extends React.Component{
       </div>
     );
   }
-}
+});
 
 export default ProfileSearch;
